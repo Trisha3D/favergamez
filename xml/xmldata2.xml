@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+File Name: xmldata2.xml
+Author: Trisha Das
+Date of creation: 4/9/2025
+-->
+
+
+<!DOCTYPE Games
+[
+<!--Elements-->
+<!ELEMENT Games (genre+)>
+    <!ATTLIST genre name CDATA #REQUIRED>
+    <!ELEMENT genre (game+)>
+    <!ELEMENT game (name,description,pricing?,searchTags*,reviews*,picture+,url)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT pricing (#PCDATA)>
+    <!ELEMENT searchTags (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ATTLIST reviews score (0|1|2|3|4|5) #REQUIRED>
+    <!ELEMENT picture (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+
+<!--Entities-->
+<!ENTITY company "Garena">
+<!ENTITY currency "USD">
+]>
+
+<Games>
+
+    <!--Genre2:Girls Casuals-->
+    <genre name="Girls Casuals">
+
+        <!--1st game-->
+        <game>
+            <name>Barbie Dreamhouse Adventure</name>
+            <description>
+                A simulation game where you build and explore Barbie's dreamhouse with friends.
+            </description>
+            <pricing>30 &currency;</pricing>
+            <searchTags>Kids</searchTags>
+            <reviews score="5">
+                Great creative play for children.
+            </reviews>
+            <picture>../images/barbie.jpg</picture>
+            <url>https://budgestudios.com/en/apps/detail/barbie-dreamhouse-adventures/</url>
+        </game>
+
+        <!--2nd game-->
+        <game>
+            <name>Talking Angela</name>
+            <description> 
+                A virtual pet game where you can talk, dress up, and play with Angela the cat.
+            </description>
+            <pricing>Free</pricing>
+            <searchTags>Virtual Pet</searchTags>
+            <reviews score="4">
+                Cute and fun for younger audiences.
+            </reviews>
+            <picture>../images/talkingAngela.jpg</picture>
+            <url>
+                https://apps.apple.com/us/app/my-talking-angela-2/id1536584509
+            </url>
+        </game>
+
+        <!--3rd game-->
+        <game>
+            <name>Candy Crush</name>
+            <description>
+                A match-3 puzzle game where you swap candies to clear levels and unlock rewards.
+            </description>
+            <pricing>Free</pricing>
+            <searchTags>Puzzle</searchTags>
+            <reviews score="5">
+                Highly addictive and entertaining.
+            </reviews>
+            <picture>../images/candyCrush.jpg</picture>
+            <url>https://www.king.com/game/candycrush/</url>
+        </game>
+    </genre>
+</Games>

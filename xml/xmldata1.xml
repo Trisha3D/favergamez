@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+File Name: xmldata1.xml
+Author: Trisha Das
+Date of creation: 4/9/2025
+-->
+
+
+<!DOCTYPE Games
+[
+<!--Elements-->
+<!ELEMENT Games (genre+)>
+    <!ATTLIST genre name CDATA #REQUIRED>
+    <!ELEMENT genre (game+)>
+    <!ELEMENT game (name,description,pricing?,searchTags*,reviews*,picture+,url)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT pricing (#PCDATA)>
+    <!ELEMENT searchTags (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ATTLIST reviews score (0|1|2|3|4|5) #REQUIRED>
+    <!ELEMENT picture (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+
+<!--Entities-->
+<!ENTITY company "Garena">
+<!ENTITY currency "USD">
+]>
+
+<Games>
+
+    <!--Genre1: Multiplayer Action-->
+    <genre name="Multiplayer Action">
+
+        <!--1st game-->
+        <game>
+            <name>Free Fire, &company;</name>
+            <description>
+                A fast-paced battle royale game where players fight to be the last one standing.
+            </description>
+            <pricing>Free</pricing>
+            <searchTags>Battle Royale</searchTags>
+            <reviews score="5">
+                Intense action and exciting gameplay!
+            </reviews>
+            <picture>../images/freefire.jpg</picture>
+            <url>https://ff.garena.com/en</url>
+        </game>
+
+        <!--2nd game-->
+        <game>
+            <name>Among Us</name>
+            <description>
+                A multiplayer party game of teamwork and betrayal set in space.
+            </description>
+            <pricing>5 &currency;</pricing>
+            <searchTags>Party </searchTags>
+            <reviews score="4">
+                Fun with friends, but repetitive alone.
+            </reviews>
+            <picture>../images/amongUs.jpg</picture>
+            <url>https://amongus-online.net/</url>
+        </game>
+
+        <!--3rd game-->
+        <game>
+            <name>Stumble Guys</name>
+            <description>
+                A knockout-style party game where players race through chaotic obstacle courses.
+            </description>
+            <pricing>Free</pricing>
+            <searchTags>Party</searchTags>
+            <reviews score="4">
+                Hilarious fun, especially with friends.
+            </reviews>
+            <picture>../images/stumbleGuys.jpg</picture>
+            <url>https://www.stumbleguys.com/</url>
+        </game>
+    </genre>
+</Games>
+

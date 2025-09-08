@@ -1,0 +1,74 @@
+/*
+File Name: style.css
+Author: Trisha Das
+Date of creation: 4/9/2025
+*/
+
+/*body*/
+body
+{
+    margin-left: 1cm;
+    margin-right: 1cm;
+    background-image: url(../images/background_homepg.jpg);
+}
+
+/*links*/
+a:link 
+{
+    color: black;       
+    text-decoration: none;
+}
+
+a:visited 
+{
+    color: blueviolet;     
+}
+
+a:hover 
+{
+    font-size: 1.5em;
+    color: red;       
+    text-decoration: underline;
+}
+
+a:active 
+{
+    color: green;      
+}
+
+/*id selector*/
+#special-section 
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;              
+    padding: 15px;
+    background-color: lightblue;
+    border: 2px solid maroon;
+    font-size: larger;
+}
+
+/*example class selector*/
+.highlight 
+{
+    background-color: whitesmoke;
+    font-size: large;
+}
+
+/*div styling*/
+div.box 
+{
+    border: 2px dashed black;
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+    background-color: moccasin;
+}
+
+/*span styling*/
+span.emphasis
+{
+    color: darkred;
+    font-style: italic;
+}

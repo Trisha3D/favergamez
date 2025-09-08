@@ -1,0 +1,85 @@
+<!--
+File Name: contact.html
+Author: Trisha Das
+Date of creation: 4/9/2025
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            FaverGamez
+        </title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+        <style>
+            body
+            {   
+                justify-content: center;    
+                align-items: center;                 
+                text-align: center;     
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--link to all pages-->
+        <hr>
+        <div id="special-section">
+            <a href="index.html"><strong>Home</strong></a> 
+            <a href="about.html"><strong>About</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+        <hr>
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <!--creating the form-->
+        <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+            <!--Name of the sender-->
+            <label for="name">Name:</label> <br>
+            <input type="text" id="name" required> <br>
+
+            <!--Email address for replies-->
+            <label for="email">Email Address:</label> <br>
+            <input type="email" id="email" required> <br>
+
+            <!--Subject of the message-->
+            <label for="subject">Subject:</label> <br>
+            <input type="text" id="subject" required> <br>
+
+            <!--the message-->
+            <label for="message">Message:</label> <br>
+            <textarea id="message" name="message" rows="5" required></textarea> <br>
+
+            <!--the messsage is urgent or not-->
+            <label>Urgency:</label> <br>
+            <!--low urgency-->
+            <input type="radio" name="urgency" id="low" required> 
+            <label for="low">Low</label> <br>
+            <!--high urgency-->
+            <input type="radio" name="urgency" id="high" required>
+            <label for="high">High</label> <br>
+
+            <!--buttons-->
+            <button type="reset" value="clear" style="font-size: larger;">Clear</button>
+            <input type="submit" value="submit" style="font-size: larger;">
+
+        </form>
+
+    <!--footer with copyright statement-->
+    <hr>
+    <footer>
+        &copy; <em>Trisha das || c3535020 <br>
+        c3535020@uon.edu.au <br>
+        University of Newcastle <br>
+        Bachelor in Computer Science </em>
+    </footer>
+    </body>
+</html>
+

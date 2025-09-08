@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+File Name: xmltemplate.xml
+Author: Trisha Das
+Date of creation: 4/9/2025
+-->
+
+
+<!DOCTYPE Games
+[
+<!--Elements-->
+<!ELEMENT Games (genre+)>
+    <!ATTLIST genre name CDATA #REQUIRED>
+    <!ELEMENT genre (game+)>
+    <!ELEMENT game (name,description,pricing?,searchTags*,reviews*,picture+,url)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT pricing (#PCDATA)>
+    <!ELEMENT searchTags (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ATTLIST reviews score (0|1|2|3|4|5) #REQUIRED>
+    <!ELEMENT picture (#PCDATA)>
+    <!ELEMENT url (#PCDATA)>
+
+<!--Entities-->
+<!ENTITY company "Garena">
+<!ENTITY currency "USD">
+]>
+
+<Games>
+
+    <!--Genre n-->
+    <genre name="Sample Genre">
+
+        <!--nth game-->
+        <game>
+            <name>Sample Game, &company;</name>
+            <description>
+                This is a place holder game description.
+            </description>
+            <pricing>0.00 &currency;</pricing>
+            <searchTags>Sample</searchTags>
+            <reviews score="5">
+                sample review.
+            </reviews>
+            <picture>sample image file</picture>
+            <url>sample url</url>
+        </game>
+
+    </genre>
+</Games>
